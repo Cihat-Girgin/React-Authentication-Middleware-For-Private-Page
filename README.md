@@ -1,1 +1,1 @@
-# React-Authentication-Middleware-For-Private-Page
+# React-Authentication-Middleware-For-Private-Pages
