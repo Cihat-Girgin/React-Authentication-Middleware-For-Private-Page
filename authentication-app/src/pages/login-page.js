@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import "../Login.css";
+import {userCheck} from "../services/auth_service";
+import {Redirect, useHistory} from "react-router-dom";
 
 function LoginPage() {
     const [email, setEmail] = useState("");
@@ -10,9 +12,16 @@ function LoginPage() {
     function validateForm() {
         return email.length > 0 && password.length > 0;
     }
-
+    const history = useHistory();
     function handleSubmit(event) {
         event.preventDefault();
+        const validate =  userCheck(email,password);
+        if(validate.status){
+            history.push('/admin')
+        }
+        else{
+            alert(validate.message)
+        }
     }
 
     return (

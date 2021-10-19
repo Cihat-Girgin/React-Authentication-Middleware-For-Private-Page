@@ -3,7 +3,7 @@ import {Link, Redirect} from "react-router-dom";
 import {authMiddleware} from "../services/auth_service";
 import LoginPage from "./login-page";
 
-function AdminPage(props) {
+function AdminPage() {
     if (!authMiddleware()) {
         return <Redirect to="/login" />
     }

@@ -2,7 +2,7 @@ import jwt from "jsonwebtoken"
 import {secret_key} from "../config"
 import {admin_account} from "../config"
 
-export const userCheck = async (username, password) => {
+export const  userCheck =  (username, password) => {
     try {
         if(admin_account.email==username && admin_account.password == password){
          const token =jwt.sign({
