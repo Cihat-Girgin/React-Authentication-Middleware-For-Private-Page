@@ -1,7 +1,12 @@
 import {Button, Col, Container, Row} from "react-bootstrap";
-import {Link} from "react-router-dom";
+import {Link, Redirect} from "react-router-dom";
+import {authMiddleware} from "../services/auth_service";
+import LoginPage from "./login-page";
 
 function AdminPage(props) {
+    if (!authMiddleware()) {
+        return <Redirect to="/login" />
+    }
     return (
         <>
             <Container className="mt-5">
