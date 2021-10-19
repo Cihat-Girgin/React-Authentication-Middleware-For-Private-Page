@@ -38,6 +38,7 @@ function LoginPage() {
                         placeholder="Password"
                     />
                 </Form.Group>
+                
                 <Button block size="lg" type="submit" disabled={!validateForm()} className="mt-3">
                     Login
                 </Button>
