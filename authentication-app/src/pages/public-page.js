@@ -11,10 +11,12 @@ function PublicPage(props) {
                             Public page
                         </h4>
                     </Col>
-                    <Col md={6} className="float-end">
-                        <Button className="btn btn-success float-end">Admin Page</Button>
+                    <Col md={6}>
                         <Button className="btn btn-success float-end">
-                            <Link to="/login">Login</Link>
+                            <Link style={{color:"#fff"}} to="/admin">Admin Page</Link>
+                        </Button>
+                        <Button className="btn btn-primary float-end" style={{marginRight:"20px"}} >
+                            <Link style={{color:"#fff"}} to="/login">Login</Link>
                         </Button>
                     </Col>
                 </Row>
