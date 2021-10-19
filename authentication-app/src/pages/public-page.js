@@ -1,4 +1,5 @@
 import {Button, Col, Container, Row} from "react-bootstrap";
+import {Link} from "react-router-dom";
 
 function PublicPage(props) {
     return (
@@ -12,6 +13,9 @@ function PublicPage(props) {
                     </Col>
                     <Col md={6} className="float-end">
                         <Button className="btn btn-success float-end">Admin Page</Button>
+                        <Button className="btn btn-success float-end">
+                            <Link to="/login">Login</Link>
+                        </Button>
                     </Col>
                 </Row>
                 <Row className="mt-5 float-none">
